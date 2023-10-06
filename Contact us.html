@@ -8,6 +8,38 @@ Shiv's World
 <link rel="stylesheet" href="style.css">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<script type="text/javascript">
+
+function validate()
+
+{
+
+var a = document.form.Name.value;
+
+if(a=="")
+
+{
+
+alert("Please Enter Your Name");
+
+document.form.Name.focus();
+
+return false;
+
+}
+
+if(!isNaN(a))
+
+{
+
+alert("Please Enter Only Characters");
+
+document.form.Name.focus();
+
+return false;
+
+}
+	</script>
 </head>
 <body class="body" bgcolor="#03131A">
     <div class="MAINDIV">
@@ -40,18 +72,18 @@ Shiv's World
         
         <div class="form">
             <center>
-        <form>
+        <form name="form" action="insert3.php" method="post" onSubmit="return validate()" style="height:auto; border:#CCDBD8 solid" >
         <b style="margin-right:36%; font-size:18px"></b><br>
-				<input type="int" id="Name" name="Name" size="60" maxlength="10" placeholder="Enter Your Name"><br><br>
+				<input type="int" id="Name" name="Name" size="60" maxlength="30" placeholder="Enter Your Name"><br><br>
                
                 <b style="margin-right:36%; font-size:18px"></b><br>
 				<input type="int" id="mobile" name="phone" size="60" maxlength="10" placeholder="Enter The Mobile Number"><br><br>
                
                 <b style="margin-right:36%; font-size:18px"></b><br>
-				<input type="int" id="Email " name="Email" size="60" maxlength="10" placeholder="Enter Your Email"><br><br>
+				<input type="int" id="Email " name="Email" size="60" maxlength="50" placeholder="Enter Your Email"><br><br>
                
                 <b style="margin-right:36%; font-size:18px"></b><br>
-				<input type="int" id="Organisation" name="Organisation" size="60" maxlength="10" placeholder="Enter The Organisation Name"><br><br>
+				<input type="int" id="Organisation" name="Organisation" size="60" maxlength="80" placeholder="Enter The Organisation Name"><br><br>
                  <button type="button" id="SUBMIT" name="SUBMIT">SUBMIT</button>
         
         </form></center>
